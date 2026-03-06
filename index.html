@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Cozy Tasks</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="tabela">
+        <header><h1>Simple Cozy Tasks</h1></header>
+        <div id="adicionar">
+            <input type="text" id="task-input" placeholder="Tarefa" maxlength="200">
+            <textarea id="task-desc" placeholder="Descrição (opcional)" maxlength="500"></textarea>
+            <button onclick="addTask()">Adicionar</button>
+        </div>
+        <div id="tarefas">
+            
+
+        </div>
+        
+    </div>
+    <button id="limpar" onclick="clearAll()">Limpar tudo</button>
+    <script src="tarefas.js"></script>
+</body>
+</html>

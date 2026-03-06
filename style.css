@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all 300ms;
+}
+:root{
+    --c1: #dcf1f4;
+    --c2: #dcf1f4;
+    --cor1: #dcf1f4;
+    --corbk: #f2ca8d;
+    --corbk2: #faf3c9;
+    --corbk22: #edc98b;
+    --corbk3: #a78963;
+    --corborda: #a48863;
+    --corinativa: #815a2f;
+    --corativa: #faf3c9;
+}
+
+header{
+    background-color: var(--corativa);
+    border-bottom: dashed 2px var(--corinativa);
+    border-top: dashed 2px var(--corinativa);
+}
+header h1{
+    margin: 0 auto;
+    color: var(--corinativa);
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+}
+body{
+    color: var(--corinativa);
+    font-family: 'Sniglet', cursive;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: 
+        linear-gradient(#3e8698, #97bec8);
+    background-attachment: fixed;
+    background-size: cover;
+}
+button{
+    font-family: 'Sniglet', cursive;
+    border: none;
+    background-color: var(--corinativa);
+    border: 1px solid var(--corativa);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 2px;
+    color: #fffdf7;
+    font-weight: 500;
+    transition: all 300ms;
+
+}
+button:hover{
+    background-color: #fdefa4;
+    color: #5d4d0f;
+    border: 1px solid var(--corinativa);
+}
+#Xzinho{
+    background-color: none;
+    background: none;
+    border: none;
+    font-size: larger;
+    color: rgb(202, 0, 0);
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#tabela{
+    background-color: var(--corbk22);
+    padding: 5px;
+    border: 2px solid var(--corborda);
+    border-radius: 5px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-end;
+    max-width: 400px;
+    min-width: 20px;
+    width: clamp(20px, 100%, 400px);
+    
+}
+
+#limpar{
+     width: clamp(20px, 100%, 400px);
+     margin: 0 auto;
+     margin-top: 10px;
+}
+.a1{
+    display: flex;
+    flex-direction: column;
+}
+
+#tarefas{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--corbk2);
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px dashed var(--corinativa);
+    margin-bottom: 5px;
+}
+#tarefas p{
+    margin: 0 auto;
+}
+
+.tarefa{
+    border: none;
+    background-color: var(--corbk);
+    border: 2px solid var(--corbk3);
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 3.5px;
+    margin-top: 3.5px;
+    color: #5d4d0f;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-start;
+    align-items: flex-start;
+    position: relative;
+
+}
+.desc1{
+    font-weight: 400;
+    margin-left: 20px;
+    margin-right: 20px;
+    word-break: break-word;
+    font-family: 'Sniglet', cursive;
+
+}
+.tarefa span{
+
+    word-break: break-word;
+    margin-left: 15px;
+}
+
+
+.done {
+    background-color: var(--corinativa);
+    text-decoration: line-through;
+    color: #f8e6bf;
+}
+/* .check{
+    left: 2px;
+    top: 0;
+    bottom: 50%;
+
+} */
+
+.check {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #5d4d0f;
+    border-radius: 4px;
+    background-color: #5d4d0f1c;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: all 200ms;
+}
+
+.check:checked {
+    background-color: #5d4d0f;
+    border-color: #5d4d0f;
+}
+
+.check:checked::after {
+    content: '✓';
+    display: block;
+    color: #fdefa4;
+    font-size: 12px;
+    text-align: center;
+    line-height: 14px;
+}
+
+
+#task-input{
+    font-family: 'Sniglet', cursive;
+    border: none;
+    background-color: var(--corativa);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 2px;
+    color: var(--corinativa);
+    font-weight: 800;
+    transition: all 300ms;
+    margin-bottom: 10px;
+
+}
+
+#task-desc{
+    font-family: 'Sniglet', cursive;
+    border: none;
+    background-color: var(--corativa);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 2px;
+    color: var(--corinativa);
+    font-weight: 500;
+    transition: all 300ms;
+    margin-bottom: 10px;
+    resize: none;
+}
+
+#adicionar{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    background-color: var(--corbk3);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
