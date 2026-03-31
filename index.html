@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,20 +8,62 @@
     <link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="tabela">
-        <header><h1>Simple Cozy Tasks</h1></header>
-        <div id="adicionar">
-            <input type="text" id="task-input" placeholder="Tarefa" maxlength="200">
-            <textarea id="task-desc" placeholder="Descrição (opcional)" maxlength="500"></textarea>
-            <button onclick="addTask()">Adicionar</button>
-        </div>
-        <div id="tarefas">
-            
 
-        </div>
-        
+
+<nav id="navbar">
+    <span id="app-title">🌸 Simple Cozy Tasks</span>
+    <div id="nav-buttons">
+        <button class="nav-btn active" id="btn-calendar" onclick="setView('calendar')">📅 Calendário</button>
+        <button class="nav-btn" id="btn-stats" onclick="setView('stats')">📊 Estatísticas</button>
     </div>
-    <button id="limpar" onclick="clearAll()">Limpar tudo</button>
-    <script src="tarefas.js"></script>
+</nav>
+
+
+<div id="month-nav">
+    <button class="month-arrow" onclick="prevMonth()">‹</button>
+    <span id="month-label"></span>
+    <button class="month-arrow" onclick="nextMonth()">›</button>
+</div>
+
+<div id="view-calendar">
+    <div id="days-grid"></div>
+</div>
+
+
+<div id="view-stats" style="display:none">
+    <div id="stats-container"></div>
+</div>
+
+
+<div id="modal-overlay" onclick="closeModal(event)">
+    <div id="modal">
+        <div id="modal-header">
+            <span id="modal-day-title"></span>
+            <button id="modal-close" onclick="closeModalForce()">✕</button>
+        </div>
+
+        
+        <div id="adicionar">
+            <input type="text" id="task-input" placeholder="Nova tarefa..." maxlength="200">
+            <textarea id="task-desc" placeholder="Descrição (opcional)" maxlength="500"></textarea>
+            
+            
+            <div id="subtask-section">
+                <div id="subtask-list"></div>
+                <div id="subtask-add-row">
+                    <input type="text" id="subtask-input" placeholder="Adicionar sub-tarefa..." maxlength="200">
+                    <button onclick="addSubtaskField()" id="btn-add-sub">+</button>
+                </div>
+            </div>
+
+            <button onclick="addTask()" id="btn-add-task">Adicionar Tarefa</button>
+        </div>
+
+        
+        <div id="tarefas"></div>
+    </div>
+</div>
+
+<script src="tarefas.js"></script>
 </body>
 </html>
