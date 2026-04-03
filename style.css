@@ -608,3 +608,107 @@ body {
         font-size: 0.72rem; 
     }
 }
+
+
+
+
+
+#view-single {
+    padding: 10px 12px 24px;
+}
+
+#single-container {
+    max-width: 420px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#single-adicionar {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: var(--corbk);
+    border-radius: var(--radius);
+    padding: 8px;
+    border: 1px solid var(--corinativa)
+}
+
+#single-task-input,
+#single-task-desc {
+    font-family: 'Sniglet', cursive;
+    border: none;
+    background: var(--corativa);
+    border-radius: 5px;
+    padding: 6px 8px;
+    color: var(--corinativa);
+    font-weight: 500;
+    width: 100%;
+    resize: none;
+}
+#single-task-input {
+    font-weight: 800;
+}
+
+#single-actions {
+    display: flex;
+    gap: 6px;
+}
+
+#btn-single-add {
+    font-family: 'Sniglet', cursive;
+    background: var(--corinativa);
+    color: var(--corativa);
+    border: none;
+    border-radius: var(--radius);
+    padding: 7px;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 0.9rem;
+    flex: 1;
+}
+#btn-single-add:hover { background: #5c3d10; }
+
+#btn-single-clear {
+    font-family: 'Sniglet', cursive;
+    background: var(--corbk22);
+    color: var(--corinativa);
+    border: 2px solid var(--corbk3);
+    border-radius: var(--radius);
+    padding: 7px 10px;
+    cursor: pointer;
+    font-size: 0.82rem;
+    white-space: nowrap;
+}
+#btn-single-clear:hover {
+    background: #c0392b;
+    color: #fff;
+    border-color: #c0392b;
+}
+
+#single-tarefas {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: var(--corbk2);
+    border-radius: var(--radius);
+    border: 2px dashed var(--corinativa);
+    padding: 8px;
+    min-height: 40px;
+}
+
+.single-empty {
+    margin: 0 auto;
+    color: var(--corbk3);
+    font-size: 0.85rem;
+}
+
+.task-desc {
+    font-size: 0.78rem;
+    font-weight: 400;
+    color: #6b4a1a;
+    margin-left: 26px;
+    word-break: break-word;
+}
+.tarefa.done-task .task-desc { color: #d4b88a; }

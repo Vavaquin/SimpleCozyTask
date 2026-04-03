@@ -14,7 +14,8 @@
     <span id="app-title">🌸 Simple Cozy Tasks</span>
     <div id="nav-buttons">
         <button class="nav-btn active" id="btn-calendar" onclick="setView('calendar')">📅 Calendário</button>
-        <button class="nav-btn" id="btn-stats" onclick="setView('stats')">📊 Estatísticas</button>
+        <button class="nav-btn" id="btn-stats"    onclick="setView('stats')">📊 Estatísticas</button>
+        <button class="nav-btn" id="btn-single"   onclick="setView('single')">📋 Lista Geral</button>
     </div>
 </nav>
 
@@ -33,6 +34,31 @@
 <div id="view-stats" style="display:none">
     <div id="stats-container"></div>
 </div>
+
+
+<!-- ── Nova aba: Lista Geral ─────────────────────────────────────────────── -->
+<div id="view-single" style="display:none">
+    <div id="single-container">
+
+        <div id="single-adicionar">
+            <input  type="text"
+                    id="single-task-input"
+                    placeholder="Nova tarefa..."
+                    maxlength="200">
+            <textarea id="single-task-desc"
+                      placeholder="Descrição (opcional)"
+                      maxlength="500"></textarea>
+            <div id="single-actions">
+                <button onclick="singleAddTask()" id="btn-single-add">Adicionar Tarefa</button>
+                <button onclick="singleClearAll()" id="btn-single-clear">🗑 Limpar tudo</button>
+            </div>
+        </div>
+
+        <div id="single-tarefas"></div>
+
+    </div>
+</div>
+<!-- ── Fim da nova aba ───────────────────────────────────────────────────── -->
 
 
 <div id="modal-overlay" onclick="closeModal(event)">
@@ -65,5 +91,8 @@
 </div>
 
 <script src="tarefas.js"></script>
+<script src="tarefassingle.js"></script>
+
+
 </body>
 </html>
