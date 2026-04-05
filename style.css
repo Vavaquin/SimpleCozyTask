@@ -689,7 +689,7 @@ body {
 
 #single-tarefas {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 4px;
     background: var(--corbk2);
     border-radius: var(--radius);
